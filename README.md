@@ -5,6 +5,13 @@ Firewall setup script which supports iptables, nftables, ufw and firewalld writt
 
 I love **Bash** because it’s **ALGOL**-like. Its simple syntax and powerful control structures feel like an evolution of the clean and structured **ALGOL** language. For anyone who appreciates concise scripting with clarity, Bash delivers that in spades—while still being incredibly flexible and powerful!
 
+  __                     _
+ / _|_      __  ___  ___| |_ _   _ _ __
+| |_\ \ /\ / / / __|/ _ \ __| | | | '_ \
+|  _|\ V  V /  \__ \  __/ |_| |_| | |_) |
+|_|   \_/\_/___|___/\___|\__|\__,_| .__/
+          |_____|                 |_|
+	  
 fw_setup.sh will check which firewall you have installed and use that to generate the ALLOW rules based on the ports it finds
 open using a ss scan.  It will generate rules for both netid: tcp & udp.  It also creates a safety rule for ssh using a default port
 of 22.  You can change which port your ssh server is listening on in the script.  
