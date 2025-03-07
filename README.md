@@ -57,7 +57,7 @@ Required Dependencies
 To check the applied firewall rules:
 ```bash
 sudo iptables -L -v --line-numbers
-'''
+```
 ## Project Goals
 
 The primary goal of this project is to provide a flexible, secure, and automated firewall setup for **Linux-based systems**. The script is designed to help users:
