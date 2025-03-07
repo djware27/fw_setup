@@ -23,18 +23,37 @@ Required Dependencies
 	5.	Ansible (for automation)
 	•	If you plan to automate the setup or updates of firewall rules.
 
-How to Install Dependencies
+## Installation
 
-For Debian-based systems:
+1. Install dependencies:
+    ```bash
+    sudo apt update && sudo apt install -y iptables iproute2 rsyslog logrotate
+    ```
+    For **Red Hat-based** systems:
+    ```bash
+    sudo dnf install -y iptables iproute rsyslog logrotate
+    ```
 
-sudo apt update && sudo apt install -y iptables iproute2 rsyslog logrotate
+2. Clone the repository:
+    ```bash
+    git clone https://github.com/djware27/fw_setup.git
+    cd fw_setup
+    ```
 
-For Red Hat-based systems:
+3. Make the script executable:
+    ```bash
+    chmod +x firewall_setup.sh
+    ```
 
-sudo dnf install -y iptables iproute rsyslog logrotate
+4. Run the script:
+    ```bash
+    sudo ./firewall_setup.sh
+    ```
 
-For Arch-based systems:
+## Usage
 
-sudo pacman -S iptables iproute2 rsyslog logrotate
+### **Testing and Verifying Firewall Rules**
 
-Once these dependencies are installed, you’re good to go! Let me know if you need more help. 🚀🔥
+To check the applied firewall rules:
+```bash
+sudo iptables -L -v --line-numbers
