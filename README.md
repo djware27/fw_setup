@@ -5,6 +5,29 @@ Firewall setup script which supports iptables, nftables, ufw and firewalld writt
 
 I love **Bash** because it’s **ALGOL**-like. Its simple syntax and powerful control structures feel like an evolution of the clean and structured **ALGOL** language. For anyone who appreciates concise scripting with clarity, Bash delivers that in spades—while still being incredibly flexible and powerful!
 
+## Project Goals
+
+The primary goal of this project is to provide a flexible, secure, and automated firewall setup for **Linux-based systems**. The script is designed to help users:
+
+1. **Easily configure and manage firewall rules** using **iptables/nftables**, **UFW**, or **Firewalld**.
+2. **Enhance security** by blocking unnecessary ports and services while enabling logging and real-time monitoring.
+3. **Simplify firewall automation** with minimal configuration, allowing for easy integration into both test and production environments.
+4. **Support multiple Linux distributions**, including **Debian**, **Ubuntu**, **Fedora**, and more.
+5. **Provide the option for future AI-driven security and traffic monitoring** to make rule configuration even smarter.
+6. **Ensure transparency** and **responsible usage**—guiding users to avoid locking themselves out or breaking their systems.
+
+### Future Goals
+
+1. **Dynamic SSH Port Detection**: Automatically pick up the SSH port from `/etc/sshd_config` or `ssh_config.d`.
+2. **Systemd Service Integration**: Create a service to start the firewall and remove the rules when the service is stopped.
+3. **Better IPv6 Support**: Implement robust IPv6 firewall rules to ensure the system is secure across both IPv4 and IPv6 traffic.
+4. **Documentation**: Provide in-depth documentation on the installation, usage, and customization of the script for different use cases.
+
+### Contributing
+
+Feel free to fork the repository and submit pull requests. Contributions are welcome, especially for new features, bug fixes, and improvements. Please make sure to test your changes before submitting them!
+
+
 ## fw_setup
 	  
 fw_setup.sh will check which firewall you have installed and use that to generate the ALLOW rules based on the ports it finds
@@ -64,24 +87,3 @@ To check the applied firewall rules:
 ```bash
 sudo iptables -L -v --line-numbers
 ```
-## Project Goals
-
-The primary goal of this project is to provide a flexible, secure, and automated firewall setup for **Linux-based systems**. The script is designed to help users:
-
-1. **Easily configure and manage firewall rules** using **iptables/nftables**, **UFW**, or **Firewalld**.
-2. **Enhance security** by blocking unnecessary ports and services while enabling logging and real-time monitoring.
-3. **Simplify firewall automation** with minimal configuration, allowing for easy integration into both test and production environments.
-4. **Support multiple Linux distributions**, including **Debian**, **Ubuntu**, **Fedora**, and more.
-5. **Provide the option for future AI-driven security and traffic monitoring** to make rule configuration even smarter.
-6. **Ensure transparency** and **responsible usage**—guiding users to avoid locking themselves out or breaking their systems.
-
-### Future Goals
-
-1. **Dynamic SSH Port Detection**: Automatically pick up the SSH port from `/etc/sshd_config` or `ssh_config.d`.
-2. **Systemd Service Integration**: Create a service to start the firewall and remove the rules when the service is stopped.
-3. **Better IPv6 Support**: Implement robust IPv6 firewall rules to ensure the system is secure across both IPv4 and IPv6 traffic.
-4. **Documentation**: Provide in-depth documentation on the installation, usage, and customization of the script for different use cases.
-
-### Contributing
-
-Feel free to fork the repository and submit pull requests. Contributions are welcome, especially for new features, bug fixes, and improvements. Please make sure to test your changes before submitting them!
